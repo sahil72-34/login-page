@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MyApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: #f4f6f9; color: #333; }
+        
+        .navbar {
+            background: linear-gradient(135deg, #203a43, #2c5364);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { display: flex; align-items: center; gap: 10px; color: #fff; font-size: 20px; font-weight: 700; text-decoration: none; }
+        .logo i { font-size: 24px; color: #00d2ff; }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { color: #d1d8e0; text-decoration: none; font-size: 15px; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+        .nav-links a:hover, .nav-links a.active { color: #fff; }
+        .logout-btn { background-color: #e74c3c; color: white; border: none; padding: 8px 18px; border-radius: 6px; cursor: pointer; font-weight: 500; }
+
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .about-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .about-card h2 { font-size: 28px; margin-bottom: 15px; color: #1a1a1a; }
+        .about-card p { color: #666; line-height: 1.8; margin-bottom: 20px; }
+        .features { display: flex; gap: 20px; margin-top: 30px; }
+        .feature-box { flex: 1; background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center; }
+        .feature-box i { font-size: 30px; color: #2c5364; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="home.html" class="logo"><i class="fa-solid fa-layer-group"></i> <span>MyApp</span></a>
+        <ul class="nav-links">
+            <li><a href="home.html"><i class="fa-solid fa-house"></i> <span>Home</span></a></li>
+            <li><a href="shop.html"><i class="fa-solid fa-cart-shopping"></i> <span>Shop</span></a></li>
+            <li><a href="about.html" class="active"><i class="fa-solid fa-circle-info"></i> <span>About</span></a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+        <button class="logout-btn" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+    </nav>
+
+    <div class="container">
+        <div class="about-card">
+            <h2>About Our Platform</h2>
+            <p>Welcome to MyApp! We provide top-notch digital solutions and high-quality products. Our mission is to simplify web management and deliver an unmatched user experience through intuitive design and technology.</p>
+            
+            <div class="features">
+                <div class="feature-box">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h4>Fast & Reliable</h4>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h4>Secure Platform</h4>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-headset"></i>
+                    <h4>24/7 Support</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('logoutBtn').addEventListener('click', () => window.location.href = 'index.html');
+    </script>
+</body>
+</html>

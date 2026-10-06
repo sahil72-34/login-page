@@ -97,12 +97,11 @@ loginForm.addEventListener('submit', function (e) {
 
     if (isValid) {
         showToast('Login successful!');
-        console.log('Login Payload:', {
-            email: emailInput.value.trim(),
-            password: passwordInput.value,
-            rememberMe: document.getElementById('rememberMe').checked
-        });
-        loginForm.reset();
+        
+        // Wait 1 second so user sees the notification, then open home.html
+        setTimeout(() => {
+            window.location.href = 'home.html';
+        }, 1000);
     }
 });
 
@@ -184,3 +183,6 @@ document.getElementById('forgotPasswordLink').addEventListener('click', (e) => {
         showToast('Please enter your email above first.', true);
     }
 });
+
+
+    

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - MyApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: #f4f6f9; color: #333; }
+        
+        .navbar {
+            background: linear-gradient(135deg, #203a43, #2c5364);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { display: flex; align-items: center; gap: 10px; color: #fff; font-size: 20px; font-weight: 700; text-decoration: none; }
+        .logo i { font-size: 24px; color: #00d2ff; }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { color: #d1d8e0; text-decoration: none; font-size: 15px; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+        .nav-links a:hover, .nav-links a.active { color: #fff; }
+        .logout-btn { background-color: #e74c3c; color: white; border: none; padding: 8px 18px; border-radius: 6px; cursor: pointer; font-weight: 500; }
+
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        .page-title { text-align: center; margin-bottom: 30px; font-size: 28px; color: #1a1a1a; }
+        
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .product-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; padding: 20px; transition: transform 0.3s ease; }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
+        .product-card h3 { font-size: 18px; margin-bottom: 8px; }
+        .product-card .price { color: #2c5364; font-weight: 700; font-size: 18px; margin-bottom: 15px; }
+        .btn-add { background: #2c5364; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; width: 100%; font-weight: 500; }
+        .btn-add:hover { background: #203a43; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="home.html" class="logo"><i class="fa-solid fa-layer-group"></i> <span>MyApp</span></a>
+        <ul class="nav-links">
+            <li><a href="home.html"><i class="fa-solid fa-house"></i> <span>Home</span></a></li>
+            <li><a href="shop.html" class="active"><i class="fa-solid fa-cart-shopping"></i> <span>Shop</span></a></li>
+            <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> <span>About</span></a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+        <button class="logout-btn" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+    </nav>
+
+    <div class="container">
+        <h2 class="page-title">Our Products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://picsum.photos/300/200?random=1" alt="Product 1">
+                <h3>Wireless Headphones</h3>
+                <p class="price">$99.99</p>
+                <button class="btn-add"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://picsum.photos/300/200?random=2" alt="Product 2">
+                <h3>Smart Watch</h3>
+                <p class="price">$149.99</p>
+                <button class="btn-add"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://picsum.photos/300/200?random=3" alt="Product 3">
+                <h3>Bluetooth Speaker</h3>
+                <p class="price">$59.99</p>
+                <button class="btn-add"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('logoutBtn').addEventListener('click', () => window.location.href = 'index.html');
+    </script>
+</body>
+</html>
