@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <!-- Tab Navigation -->
+        <div class="tab-header">
+            <button class="tab-btn active" id="loginTabBtn">Login</button>
+            <button class="tab-btn" id="signupTabBtn">Sign Up</button>
+        </div>
+
+        <!-- Notification Toast -->
+        <div class="toast" id="toast"></div>
+
+        <!-- LOGIN FORM -->
+        <form id="loginForm" class="form-content active-form" novalidate>
+            <h2 class="form-title">Welcome Back!</h2>
+            <p class="form-subtitle">Please enter your credentials to log in.</p>
+
+            <div class="input-group">
+                <label for="loginEmail">Email Address</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-envelope input-icon"></i>
+                    <input type="email" id="loginEmail" placeholder="you@example.com" required>
+                </div>
+                <small class="error-msg" id="loginEmailError"></small>
+            </div>
+
+            <div class="input-group">
+                <label for="loginPassword">Password</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock input-icon"></i>
+                    <input type="password" id="loginPassword" placeholder="••••••••" required>
+                    <i class="fa-solid fa-eye toggle-password" id="toggleLoginPassword"></i>
+                </div>
+                <small class="error-msg" id="loginPasswordError"></small>
+            </div>
+
+            <div class="form-options">
+                <label class="remember-me">
+                    <input type="checkbox" id="rememberMe">
+                    <span>Remember me</span>
+                </label>
+                <a href="#" class="forgot-link" id="forgotPasswordLink">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                <span>Sign In</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </form>
+
+        <!-- SIGN UP FORM -->
+        <form id="signupForm" class="form-content" novalidate>
+            <h2 class="form-title">Create Account</h2>
+            <p class="form-subtitle">Fill in the details below to register.</p>
+
+            <div class="input-group">
+                <label for="signupName">Full Name</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-user input-icon"></i>
+                    <input type="text" id="signupName" placeholder="John Doe" required>
+                </div>
+                <small class="error-msg" id="signupNameError"></small>
+            </div>
+
+            <div class="input-group">
+                <label for="signupEmail">Email Address</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-envelope input-icon"></i>
+                    <input type="email" id="signupEmail" placeholder="you@example.com" required>
+                </div>
+                <small class="error-msg" id="signupEmailError"></small>
+            </div>
+
+            <div class="input-group">
+                <label for="signupPassword">Password</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock input-icon"></i>
+                    <input type="password" id="signupPassword" placeholder="Minimum 6 characters" required>
+                    <i class="fa-solid fa-eye toggle-password" id="toggleSignupPassword"></i>
+                </div>
+                <small class="error-msg" id="signupPasswordError"></small>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                <span>Create Account</span>
+                <i class="fa-solid fa-user-plus"></i>
+            </button>
+        </form>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="java.js"></script>
+</body>
+</html>

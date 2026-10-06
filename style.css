@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+
+}
+
+body {
+    min-height: 100vh;
+    background: -moz-repeating-linear-gradient();
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.card {
+    background: rgba(red, green, blue, alpha);
+    width: 100%;
+    max-width: 420px;
+    border-radius: 16px;
+    box-shadow: oklab(lightness a b);
+    padding: relative;
+    overflow: hidden;
+}
+
+.tab-header {
+    display: flex;
+    background-color: wheat;
+    border-radius: 10px;
+    padding: 4px;
+    margin-bottom: 25px;
+
+}
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    color: #666;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background-color: #ffffff;
+    color: #2c5364;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* FORM SWITCHING */
+.form-content {
+    display: none;
+}
+
+.form-content.active-form {
+    display: block;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-title {
+    font-size: 22px;
+    color: #1a1a1a;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.form-subtitle {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* INPUT GROUPS */
+.input-group {
+    margin-bottom: 16px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    color: #888;
+    font-size: 14px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    color: #888;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: #333;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 38px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-wrapper input:focus {
+    border-color: #2c5364;
+    box-shadow: 0 0 0 3px rgba(44, 83, 100, 0.15);
+}
+
+.input-wrapper input.error {
+    border-color: #e74c3c;
+}
+
+.error-msg {
+    color: #e74c3c;
+    font-size: 11px;
+    margin-top: 4px;
+    display: block;
+    min-height: 14px;
+}
+
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: #555;
+}
+
+.forgot-link {
+    color: #2c5364;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #203a43, #2c5364);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.submit-btn:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+
+.toast {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: top 0.4s ease;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+.toast.show {
+    top: 15px;
+}
+
+.toast.error-toast {
+    background-color: #e74c3c;
+}
